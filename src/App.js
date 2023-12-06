@@ -214,6 +214,7 @@ function App() {
 
 
         <div className='' id='content'>
+          
           <div className='border text-center m-3' id='hangman'>
            {isMobile && 
             <div>
@@ -226,12 +227,12 @@ function App() {
             {isMobile && playAgain ? <button className='btn btn-lg btn-success text-center w-50 play' onClick={() => window.location.reload()}>Play Again?</button> : null}
           </div>
 
-          <div className=''>
+          
 
 
             <div className=''>
 
-              <div className=''>
+        
 
                 <div className='d-flex justify-content-center ' id='letters'>
 
@@ -243,7 +244,7 @@ function App() {
                     )
                   })}
                 </div>
-              </div>
+            
 
 
               <div className='col-12 text-center'>
@@ -283,7 +284,7 @@ function App() {
                 {!isMobile && playAgain && <button className='btn btn-lg btn-success text-center w-50' onClick={() => window.location.reload()}>Play Again?</button>}
               </div>
             </div>
-          </div>
+   
         </div>
 
       </div>
