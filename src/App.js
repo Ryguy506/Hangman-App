@@ -17,6 +17,7 @@ function App() {
   const [hint, setHint] = useState('')
   const [incorrectGuesses, setIncorrectGuesses] = useState(0)
   const [playAgain, setPlayAgain] = useState(false)
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768 ? true : false)
 
   useEffect(() => {
 
@@ -38,6 +39,15 @@ function App() {
 
   }, [])
 
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth < 768) {
+      setIsMobile(true)
+    }
+    else {
+      setIsMobile(false)
+    }
+  })
 
 
   useEffect(() => {
@@ -189,34 +199,45 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className='text-center border-bottom border-primary'>Hang Man</h1>
+      {!isMobile &&
+       <div className='text-center bg-dark p-2'>
+      {incorrectGuesses === 10 ? <h2 className='text-danger'>Game Over</h2> : 
+            incorrectGuesses < 10 && correctLetters.join('') === word && correctLetters.length > 0 
+            ? <h2 className='text-success'> You Win</h2> : <h2 className='text-light'>{10 - incorrectGuesses} Guesses Remaining </h2>}
+
+      </div>
+      }
 
 
       <div className='container'>
 
 
 
-        <div className='row'>
-          <div className='col-5 border text-center'>
+        <div className='' id='content'>
+          <div className='border text-center m-3' id='hangman'>
+           {isMobile && 
+            <div>
             {incorrectGuesses === 10 ? <h2 className='text-danger'>Game Over</h2> : 
             incorrectGuesses < 10 && correctLetters.join('') === word && correctLetters.length > 0 
-            ? <h2 className='text-success'> You Win</h2> : <h2>{10 - incorrectGuesses} Guesses Remaining </h2>}
-
+            ? <h2 className='text-success'> You Win</h2> : <h2 >{10 - incorrectGuesses} Guesses Remaining </h2>}
+        </div>
+        }
             <canvas id="hangmanCanvas" width="400" height="400"></canvas>
+            {isMobile && playAgain ? <button className='btn btn-lg btn-success text-center w-50 play' onClick={() => window.location.reload()}>Play Again?</button> : null}
           </div>
 
-          <div className='col-7'>
+          <div className=''>
 
 
-            <div className='row'>
+            <div className=''>
 
-              <div className='col-12'>
+              <div className=''>
 
-                <div className='d-flex justify-content-center mt-5' id='letters'>
+                <div className='d-flex justify-content-center ' id='letters'>
 
                   {correctLetters.map((letter, index) => {
                     return (
-                      <div className=' text-center mx-3' key={index} style={{ "fontSize": "55px" }}>
+                      <div className=' text-center mx-3' key={index}>
                         {letter}
                       </div>
                     )
@@ -255,11 +276,11 @@ function App() {
                 <button className='btn btn-lg btn-primary m-1 letter' onClick={checkLetter}>Z</button>
 
               </div>
-              <div className='d-flex justify-content-center'>
-                {hint ? <p className='text-center bg-info p-3 rounded fs-5 mt-4'>{hint}</p> : <button className='btn btn-lg btn-info mt-5 text-center w-50 ' onClick={getHint}>Hint</button>}
+              <div className='d-flex justify-content-center mt-3'>
+                {hint ? <p className='text-center bg-info p-3 rounded fs-5'>{hint}</p> : <button className='btn btn-lg btn-info  text-center w-50 ' onClick={getHint}>Hint</button>}
               </div>
               <div className='d-flex justify-content-center'>
-                {playAgain ? <button className='btn btn-lg btn-success text-center w-50 play' onClick={() => window.location.reload()}>Play Again?</button> : null}
+                {!isMobile && playAgain && <button className='btn btn-lg btn-success text-center w-50' onClick={() => window.location.reload()}>Play Again?</button>}
               </div>
             </div>
           </div>
