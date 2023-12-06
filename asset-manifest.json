@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.aec0d1e5.css",
-    "main.js": "/static/js/main.0ce05ea4.js",
-    "static/js/787.5d4fd713.chunk.js": "/static/js/787.5d4fd713.chunk.js",
-    "index.html": "/index.html",
-    "main.aec0d1e5.css.map": "/static/css/main.aec0d1e5.css.map",
-    "main.0ce05ea4.js.map": "/static/js/main.0ce05ea4.js.map",
-    "787.5d4fd713.chunk.js.map": "/static/js/787.5d4fd713.chunk.js.map"
+    "main.css": "/Hangman-App/static/css/main.aec0d1e5.css",
+    "main.js": "/Hangman-App/static/js/main.5a3d1da7.js",
+    "static/js/787.5d4fd713.chunk.js": "/Hangman-App/static/js/787.5d4fd713.chunk.js",
+    "index.html": "/Hangman-App/index.html",
+    "main.aec0d1e5.css.map": "/Hangman-App/static/css/main.aec0d1e5.css.map",
+    "main.5a3d1da7.js.map": "/Hangman-App/static/js/main.5a3d1da7.js.map",
+    "787.5d4fd713.chunk.js.map": "/Hangman-App/static/js/787.5d4fd713.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.aec0d1e5.css",
-    "static/js/main.0ce05ea4.js"
+    "static/js/main.5a3d1da7.js"
   ]
 }
