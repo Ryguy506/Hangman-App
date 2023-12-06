@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/hangman/static/css/main.aec0d1e5.css",
-    "main.js": "/hangman/static/js/main.e238324b.js",
-    "static/js/787.5d4fd713.chunk.js": "/hangman/static/js/787.5d4fd713.chunk.js",
-    "index.html": "/hangman/index.html",
-    "main.aec0d1e5.css.map": "/hangman/static/css/main.aec0d1e5.css.map",
-    "main.e238324b.js.map": "/hangman/static/js/main.e238324b.js.map",
-    "787.5d4fd713.chunk.js.map": "/hangman/static/js/787.5d4fd713.chunk.js.map"
+    "main.css": "/static/css/main.aec0d1e5.css",
+    "main.js": "/static/js/main.0ce05ea4.js",
+    "static/js/787.5d4fd713.chunk.js": "/static/js/787.5d4fd713.chunk.js",
+    "index.html": "/index.html",
+    "main.aec0d1e5.css.map": "/static/css/main.aec0d1e5.css.map",
+    "main.0ce05ea4.js.map": "/static/js/main.0ce05ea4.js.map",
+    "787.5d4fd713.chunk.js.map": "/static/js/787.5d4fd713.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.aec0d1e5.css",
-    "static/js/main.e238324b.js"
+    "static/js/main.0ce05ea4.js"
   ]
 }
